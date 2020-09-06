@@ -1,0 +1,202 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding-top: 2%;
+    position: relative;
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+        justify-content: space-between;
+        padding-top: 5%;
+    }
+    
+    &:after {
+        content: '';
+        position: absolute;
+        border: rem(1px) solid #b9dffc;
+        width: 93%;
+        bottom: -10%;
+        @include tablets {
+            width: 96%;
+        }
+        @include phones {
+            bottom: -30%;
+        }
+    }
+    &__logo {
+        width: 30%;
+        @media only screen and (min-width: 769px) and (max-width: 1023px) {
+            padding-left: 3%;
+        }
+        @include tablets {
+            width: 25%;
+            padding-left: 3%;
+        }
+    } 
+    &__menu {
+        width: 50%;
+        @include tablets {
+            width: 60%;
+        }
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            transition: all 0.3s ease 0s;
+            background-color: #4ca3e6;
+            padding: rem(90px) rem(10px) rem(20px) rem(30px);
+        }
+        
+        &.active {
+            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                top: 0;
+                z-index: 1500;
+            }
+        }
+    }
+    &__burger {
+        display: none;
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            display: block;
+            width: rem(30px);
+            height: rem(20px);
+            position: relative;
+            z-index: 2000;
+            order: 1;
+            margin-right: 4%;
+        }
+        
+        &.active span {
+            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                transform: scale(0);
+            }
+        }
+        &.active:before {
+            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                transform:rotate(45deg);
+                top: rem(9px);
+        }
+        }
+        &.active:after {
+            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                transform:rotate(-45deg);
+                bottom: rem(9px);
+            }
+         } 
+         & span {
+            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                position: absolute;
+                background-color: #fff;
+                left: 0;
+                width: 100%;
+                height: rem(2px);
+                top: rem(9px);
+                transition: all 0.3s ease 0s;
+            }
+            
+         }
+         &:before {
+            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                width: 100%;
+                height: rem(2px);
+                left: 0;
+                transition: all 0.3s ease 0s;
+                top: 0;
+            }
+            
+        }
+        &:after {
+            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                width: 100%;
+                height: rem(2px);
+                left: 0;
+                transition: all 0.3s ease 0s;
+                bottom: 0;
+            }
+        }    
+    }
+
+    &__btn {
+        margin-left: 4%;
+        @include tablets {
+            margin-left: 0;
+        }
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            padding-left: 30%;
+        }
+    }
+    
+}
+
+.nav {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+        height: 100%;
+    }
+    
+    &__list {
+        display: flex;
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            flex-direction: column;
+            height: 50%;
+        }
+    }
+    &__item {
+        margin-left: 5%;
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            height: 100%;
+        }
+    }
+    &__link {
+        font-family: 'Raleway-SemiBold';
+        font-size: rem(17px);
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include tablets {
+            font-size: rem(13px);
+        }
+    }
+}
+
+.btn-link {
+        display: inline-block;
+        font-family: 'Raleway-SemiBold';
+        font-size: rem(17px);
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: rem(15px) rem(25px);
+        background-color: #4ca3e6;
+        border-radius: rem(10px);
+        @include tablets {
+            font-size: rem(13px);
+            padding: rem(10px) rem(20px);
+        }
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            font-size: rem(12px);
+            padding: rem(8px) rem(15px);
+        }
+}
+
+.logo-link {
+    & img {
+        @include tablets {
+            width: 60%;
+        }
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            width: 100%;
+        }
+    }
+}
+
+
+  
+  
+  

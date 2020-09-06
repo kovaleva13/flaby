@@ -1,0 +1,131 @@
+.flaby {
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+}
+
+.title {
+    font-family: 'MuseoSlab';
+    font-size: rem(40px);
+    text-transform: uppercase;
+    color: #fffefe;
+    margin-top: 17%;
+    @media only screen and (min-width: 769px) and (max-width: 1023px) {
+        padding-left: 3%;
+    }
+    @include tablets {
+        font-size: rem(30px);
+        margin-top: 10%;
+        margin-bottom: 6%;
+    }
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+      padding-left: 3%;
+    }
+    @include phones {
+        font-size: rem(22px);
+        margin-top: 23%;
+        text-align: center;
+    }
+}
+
+.flaby-text {
+    font-family: 'Raleway-Medium';
+    font-size: rem(26px);
+    color: #fefefe;
+    width: 45%;
+    line-height: 1.5;
+    @media only screen and (min-width: 769px) and (max-width: 1023px) {
+        padding-left: 3%;
+    }
+    @include tablets {
+        font-size: rem(20px);
+        margin-bottom: 3%;
+    }
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+        padding-left: 3%;
+      }
+    @include phones {
+        font-size: rem(18px);
+        text-align: center;
+        margin-top: 5%;
+        width: 96%;
+    } 
+}
+
+.flaby-btns {
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 15%;
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        padding-left: 3%;
+    }
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+        padding-left: 2%;
+      }
+    @include phones {
+        flex-direction: column;
+        margin-top: 20%;
+        text-align: center;
+    }
+}
+
+
+.google-link {
+    display: inline-block;
+    font-family: 'Raleway-SemiBold';
+    font-size: rem(20px);
+    color: #fff;
+    text-decoration: none;
+    background-color: #4f9edb;
+    background-image: url('../img/google.png');
+    background-repeat: no-repeat;
+    background-position: rem(15px) center;
+    padding: rem(20px) rem(17px) rem(20px) rem(50px);
+    border-radius: rem(7px);
+    &:hover {
+        background-color: #fff;
+        color: #3e3e3e;
+        box-shadow: 0 rem(8px) rem(11px) 0 rgba(54, 54, 54, 0.15);
+    }
+    @include tablets {
+        font-size: rem(16px);
+    }
+    @include phones {
+        font-size: rem(14px);
+    }
+}
+
+.google-btn {
+    @include phones {
+        margin-bottom: 20%;
+    }
+}
+
+.learn-btn {
+    margin-left: 2%;
+}
+
+.learn-link {
+    display: inline-block;
+    font-family: 'Raleway-SemiBold';
+    font-size: rem(20px);
+    color: #fff;
+    text-decoration: none;
+    background-color: #4f9edb;
+    padding: rem(20px) rem(40px);
+    border-radius: rem(7px);
+    &:hover {
+        background-color: #fff;
+        color: #3e3e3e;
+        box-shadow: 0 rem(8px) rem(11px) 0 rgba(54, 54, 54, 0.15);
+    }
+    @include tablets {
+        font-size: rem(16px);
+    }
+    @include phones {
+        font-size: rem(14px);
+    }
+}

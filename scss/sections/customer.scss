@@ -1,0 +1,164 @@
+.customer {
+    background-image: url('../img/bg3.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    @include phones {
+      padding-bottom: 10%;
+    }
+}
+
+.slider-wrap {
+    margin-top: 5%;
+}
+
+
+[type=radio] {
+    display: none;
+  }
+  
+  #slider {
+    height: 35vw;
+    position: relative;
+    perspective: rem(1000px);
+    transform-style: preserve-3d;
+    @include phones {
+      height: 90vw;
+    }
+  }
+  
+  #slider label {
+    margin: auto;
+    width: 60%;
+    height: 70%;
+    border-radius: rem(4px);
+    position: absolute;
+    left: 0; 
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    @include tablets {
+      height: 90%;
+    }
+    @include phones {
+      height: 100%;
+    }
+  }
+  
+  #s1:checked ~ #slide4, #s2:checked ~ #slide5,
+  #s3:checked ~ #slide1, #s4:checked ~ #slide2,
+  #s5:checked ~ #slide3 {
+    box-shadow: 0 rem(1px) rem(4px) 0 rgba(0,0,0,.37);
+    transform: translate3d(-30%,0,rem(-200px));
+  }
+  
+  #s1:checked ~ #slide5, #s2:checked ~ #slide1,
+  #s3:checked ~ #slide2, #s4:checked ~ #slide3,
+  #s5:checked ~ #slide4 {
+    box-shadow: 0 rem(6px) rem(10px) 0 rgba(0,0,0,.3), 0 rem(2px) rem(2px) 0 rgba(0,0,0,.2);
+    transform: translate3d(-15%,0,rem(-100px));
+  }
+  
+  #s1:checked ~ #slide1, #s2:checked ~ #slide2,
+  #s3:checked ~ #slide3, #s4:checked ~ #slide4,
+  #s5:checked ~ #slide5 {
+    box-shadow: 0 rem(13px) rem(25px) 0 rgba(0,0,0,.3), 0 rem(11px) rem(7px) 0 rgba(0,0,0,.19);
+    transform: translate3d(0,0,0);
+  }
+  
+  #s1:checked ~ #slide2, #s2:checked ~ #slide3,
+  #s3:checked ~ #slide4, #s4:checked ~ #slide5,
+  #s5:checked ~ #slide1 {
+    box-shadow: 0 rem(6px) rem(10px) 0 rgba(0,0,0,.3), 0 rem(2px) rem(2px) 0 rgba(0,0,0,.2);
+    transform: translate3d(15%,0,rem(-100px));
+  }
+  
+  #s1:checked ~ #slide3, #s2:checked ~ #slide4,
+  #s3:checked ~ #slide5, #s4:checked ~ #slide1,
+  #s5:checked ~ #slide2 {
+    box-shadow: 0 rem(1px) rem(4px) 0 rgba(0,0,0,.37);
+    transform: translate3d(30%,0,rem(-200px));
+  }
+  
+  #slide1 { background: #ffffff }
+  #slide2 { background: #ffffff }
+  #slide3 { background: #ffffff }
+  #slide4 { background: #ffffff }
+  #slide5 { background: #ffffff }
+  
+  .slider {
+    position: relative;
+  }
+  .slider-img {
+    position: absolute;
+    top: -8%;
+    left: 42%;
+    @include tablets {
+      top: -6%;
+      left: 43%;
+    }
+    @include phones {
+      left: 38%;
+      top: -5%;
+    }
+    & img {
+      @include tablets {
+        width: 60%;
+      }
+      @include phones {
+        width: 50%;
+      }
+    }
+  }
+
+  .slider-title {
+    font-family: 'Raleway-Bold';
+    font-size: rem(20px);
+    color: #494949;
+    margin-top: 12%;
+    display: flex;
+    justify-content: center;
+    @include tablets {
+      font-size: rem(17px);
+    }
+    @include phones {
+      font-size: rem(15px);
+      margin-top: 20%;
+    }
+  }
+
+  .slider-desc {
+    font-family: 'Raleway-Medium';
+    font-size: rem(15px);
+    color: #7c7c7c;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    @include tablets {
+      font-size: rem(14px);
+    }
+    @include phones {
+      font-size: rem(13px);
+    }
+  }
+
+  .slider-text {
+    font-family: 'Raleway-Medium';
+    font-size: rem(18px);
+    color: #7c7c7c;
+    display: inline-block;
+    text-align: center;
+    padding: 5% 10%;
+    line-height: 1.6;
+    @include tablets {
+      font-size: rem(16px);
+      padding: 2% 10%;
+    }
+    @include phones {
+      font-size: rem(14px);
+      padding: 6% 11%;
+    }
+  }
+  
+  
+  

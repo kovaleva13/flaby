@@ -1,0 +1,21 @@
+@import "config/normalize";
+
+$desktop: 1200px;
+$tablets: 768px;
+$phones: 480px;
+
+@import "config/mixins";
+@import "layout/fonts";
+@import "layout/base";
+@import "layout/adjustment";
+
+@import "sections/header";
+@import "sections/flaby";
+@import "sections/services";
+@import "sections/unlim";
+@import "sections/other";
+@import "sections/customer";
+@import "sections/great";
+@import "sections/price";
+@import "sections/subscribe";
+@import "sections/footer";

@@ -1,0 +1,150 @@
+.price {
+    margin-top: 10%;
+    background-image: url('../img/bg4.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 7%;
+        margin-bottom: 10%;
+        @include phones {
+            flex-direction: column;
+        }
+    }
+    &__item {
+        background-image: url('../img/bg5.jpg');
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        padding: 5% 8%;
+        border-radius: rem(10px);
+        &:hover {
+            position: relative;
+            opacity: 1;
+            transform: scale(1.1);
+            transition: 0.7s;
+            box-shadow: 0 0 rem(51px) 0 rgba(92, 149, 161, 0.33);
+        }
+        @include tablets {
+            padding: 5%;
+        }
+        @include phones {
+            margin-bottom: 10%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+    &__btn {
+        text-align: center;
+        margin-top: 25%;
+        @include phones {
+            margin: 10% 0;
+        }
+    }
+}
+
+.item {
+    &__img {
+        & img {
+            width: 55%;
+            display: block;
+            margin: 0 auto;
+            height: rem(60px);
+            @include tablets {
+                width: 45%;
+                height: rem(50px);
+            }
+            @include phones {
+                width: 20%;
+                height: rem(60px);
+            }
+        }
+    }
+    &__title {
+        font-family: 'Raleway-Bold';
+        font-size: rem(16px);
+        color: #494949;
+        text-align: center;
+        margin-top: 25%;
+        @include tablets {
+            font-size: rem(14px);
+        }
+        @include phones {
+            margin-top: 10%;
+        }
+    }
+    &__price {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        &--dol {
+            font-family: 'Raleway-Medium';
+            font-size: rem(20px);
+            color: #2eb0ec;
+            padding-bottom: 30%;
+            @include tablets {
+                font-size: rem(16px);
+            }
+            @include phones {
+                padding-bottom: 10%;
+            }
+        }
+        &--cost {
+            font-family: 'Raleway-ExtraBold';
+            font-size: rem(72px);
+            color: #2eb0ec;
+            @include tablets {
+                font-size: rem(55px);
+            }
+        }
+        &--month {
+            font-family: 'Raleway-Medium';
+            font-size: rem(20px);
+            color: #2eb0ec;
+            @include tablets {
+                font-size: rem(16px);
+            }
+        }
+    }
+}
+
+
+.desc__list {
+    margin-top: 20%;
+    @include phones {
+        margin-top: 15%;
+    }
+}
+
+.desc__item {
+    font-family: 'Raleway-Medium';
+    font-size: rem(14px);
+    color: #7c7c7c;
+    margin-bottom: 10%;
+    text-align: center;
+    @include phones {
+        margin-bottom: 7%;
+    }
+}
+
+.price-link {
+    display: inline-block;
+    font-family: 'Raleway-Bold';
+    font-size: rem(14px);
+    color: #fff;
+    background-color: #66d4f4;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: rem(15px) rem(25px);
+    border-radius: rem(25px);
+    box-shadow: 0 rem(10px) rem(16px) 0 rgba(102, 212, 244, 0.3);
+      @include tablets {
+        font-size: rem(12px); 
+        padding: rem(10px) rem(22px);
+      }
+}
+
+
+  

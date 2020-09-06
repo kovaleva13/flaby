@@ -1,0 +1,87 @@
+.subscribe {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        border: rem(1px) solid #dfdfdf;
+        width: 84%;
+        bottom: 0;
+        left: 6%;
+        @include tablets {
+            width: 90%;
+            left: 5%;
+        }
+        @include phones {
+            width: 66%;
+            left: 17%;
+        }
+    }
+}
+
+.form {
+    margin: 0 auto;
+    margin-top: 7%;
+    margin-bottom: 15%;
+    width: 35%;
+    @include tablets {
+        width: 55%;
+    }
+    @include phones {
+        width: 95%;
+    }
+    &__row {
+        margin-bottom: 7%;
+    }
+
+    &__input {
+        background-color: #d7f2f2;
+        border: rem(1px) solid transparent;
+        height: rem(75px);
+        width: 100%;
+        text-align: center;
+        font-family: 'Raleway-Bold';
+        font-size: rem(14px);
+        color: #505050;
+        opacity: 35%;
+        border-radius: rem(35px);
+        @include phones {
+            height: rem(50px);
+        }
+        &:focus {
+            border: rem(1px) solid #f7f7f7;
+            background-color: #fff;
+            color: #7c7c7c;
+            opacity: 100%;
+            outline: none;
+            box-shadow: 0 rem(8px) rem(16px) 0 rgba(92, 149, 161, 0.07);
+        }
+    }
+}
+
+.btn {
+    background-color: #66d4f4;
+    border: rem(1px) solid transparent;
+    height: rem(75px);
+    width: 100%;
+    text-align: center;
+    font-family: 'Raleway-Bold';
+    font-size: rem(16px);
+    color: #fff;
+    border-radius: rem(35px);
+    text-transform: uppercase;
+    box-shadow: 0 rem(10px) rem(16px) 0 rgba(102, 212, 244, 0.3);
+    &:focus {
+        outline: none;
+    }
+    @include tablets {
+        font-size: rem(14px);
+    }
+    @include phones {
+        height: rem(50px);
+    }
+}
+
+
+
+
+  

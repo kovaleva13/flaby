@@ -1,0 +1,19 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: rem(1150px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        max-width: rem(730px);
+    }
+    @include phones {
+        max-width: rem(310px);
+    }
+}
